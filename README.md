@@ -79,8 +79,10 @@ Several template files that can be customized are found in the following directo
 ## Running via Docker Hub (recommended)
 Each tagged/released version of hapi-fhir-jpaserver is built as a Docker image and published to Docker hub. To run the published Docker image from DockerHub:
 
-docker pull hapiproject/hapi:latest
+```bash
+  docker pull hapiproject/hapi:latest
 docker run -p 8080:8080 hapiproject/hapi:latest
+```
 This will run the docker image with the default configuration, mapping port 8080 from the container to port 8080 in the host. Once running, you can access http://localhost:8080/ in the browser to access the HAPI FHIR server's UI or use http://localhost:8080/fhir/ as the base URL for your REST requests.
 
 If you change the mapped port, you need to change the configuration used by HAPI to have the correct hapi.fhir.tester property/value.
